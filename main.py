@@ -7,8 +7,6 @@ window.wm_title("This is my app")
 lbl_fahrenheit = tk.Label(
     master=window,
     text="Fahrenheit:",
-    width=12,
-    height=2,
 )
 ent_fahrenheit = tk.Entry(
     master=window,
@@ -22,17 +20,16 @@ btn_calc = tk.Button(
 lbl_celsius = tk.Label(
     master=window,
     text="Celsius",
-    height=2,
 )
 lbl_result = tk.Label(
     master=window,
     text="Result will be shown here...",
 )
-lbl_fahrenheit.grid(row=0,column=0)
-ent_fahrenheit.grid(row=0,column=1)
-btn_calc.grid(row=0,column=2)
-lbl_celsius.grid(row=1,column=0)
-lbl_result.grid(row=1,column=1)
+lbl_fahrenheit.grid(row=0,column=0,padx=10,pady=(10,5))
+ent_fahrenheit.grid(row=0,column=1,padx=10,pady=(10,5))
+btn_calc.grid(row=0,column=2,padx=10,pady=(10,5))
+lbl_celsius.grid(row=1,column=0,padx=10,pady=(10,20))
+lbl_result.grid(row=1,column=1,padx=10,pady=(10,20))
 window.mainloop()
 
 
