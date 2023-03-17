@@ -19,12 +19,17 @@ ent_fahrenheit = tk.Entry(
 
 def btn_command():
     try:
-        faren_value = float(ent_fahrenheit.get())
-        celcius = fahrenheit_to_celcius(faren_value)
-    except ValueError:
-        lbl_result["text"] = "you should enter number"
+        assert not len(ent_fahrenheit.get()) == 0
+    except AssertionError:
+        lbl_result["text"] = "input empty..."
     else:
-        lbl_result["text"] = celcius
+        try:
+            faren_value = float(ent_fahrenheit.get())
+            celcius = fahrenheit_to_celcius(faren_value)
+        except ValueError:
+            lbl_result["text"] = "you should enter number"
+        else:
+            lbl_result["text"] = celcius
 
 btn_calc = tk.Button(
     master=window,
