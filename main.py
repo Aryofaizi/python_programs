@@ -4,35 +4,35 @@ window = tk.Tk()
 
 window.wm_title("This is my app")
 
-fahrenheit_lable = tk.Label(
+lbl_fahrenheit = tk.Label(
     master=window,
     text="Fahrenheit:",
     width=12,
     height=2,
 )
-fahrenheit_entry = tk.Entry(
+ent_fahrenheit = tk.Entry(
     master=window,
     width=55,
 )
-calc_button = tk.Button(
+btn_calc = tk.Button(
     master=window,
     text="Calc",
     width=9,
 )
-celsius_label = tk.Label(
+lbl_celsius = tk.Label(
     master=window,
     text="Celsius",
     height=2,
 )
-result_label = tk.Label(
+lbl_result = tk.Label(
     master=window,
     text="Result will be shown here...",
 )
-fahrenheit_lable.grid(row=0,column=0)
-fahrenheit_entry.grid(row=0,column=1)
-calc_button.grid(row=0,column=2)
-celsius_label.grid(row=1,column=0)
-result_label.grid(row=1,column=1)
+lbl_fahrenheit.grid(row=0,column=0)
+ent_fahrenheit.grid(row=0,column=1)
+btn_calc.grid(row=0,column=2)
+lbl_celsius.grid(row=1,column=0)
+lbl_result.grid(row=1,column=1)
 window.mainloop()
 
 
