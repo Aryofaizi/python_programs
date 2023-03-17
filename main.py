@@ -4,6 +4,10 @@ window = tk.Tk()
 
 window.title("This is my app")
 
+
+def fahrenheit_to_celcius(faren):
+    return (5/9) * (faren-32)
+
 lbl_fahrenheit = tk.Label(
     master=window,
     text="Fahrenheit:",
@@ -12,10 +16,21 @@ ent_fahrenheit = tk.Entry(
     master=window,
     width=55,
 )
+
+def btn_command():
+    try:
+        faren_value = int(ent_fahrenheit.get())
+        celcius = fahrenheit_to_celcius(faren_value)
+    except ValueError:
+        lbl_result["text"] = "you should enter number"
+    else:
+        lbl_result["text"] = celcius
+
 btn_calc = tk.Button(
     master=window,
     text="Calc",
     width=9,
+    command=btn_command
 )
 lbl_celsius = tk.Label(
     master=window,
