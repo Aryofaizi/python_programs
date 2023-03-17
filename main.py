@@ -19,7 +19,7 @@ ent_fahrenheit = tk.Entry(
 
 def btn_command():
     try:
-        faren_value = int(ent_fahrenheit.get())
+        faren_value = float(ent_fahrenheit.get())
         celcius = fahrenheit_to_celcius(faren_value)
     except ValueError:
         lbl_result["text"] = "you should enter number"
