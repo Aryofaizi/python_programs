@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import E,W,N,S
 window = tk.Tk()
 
-window.wm_title("This is my app")
+window.title("This is my app")
 
 lbl_fahrenheit = tk.Label(
     master=window,
